@@ -2,7 +2,8 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const ADMIN_PASS = process.env.ADMIN_PASS;
 
 // Serve website files from the current folder
 app.use(express.static(__dirname));
